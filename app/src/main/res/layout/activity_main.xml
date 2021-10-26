@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="16dp"
+    android:layout_margin="8dp"
     tools:context=".Static_Fragment.Static_Activity">
 
     <TextView
@@ -30,7 +30,7 @@
         app:layout_constraintBottom_toTopOf="@+id/fragment1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" >
+        app:layout_constraintTop_toBottomOf="@+id/textView">
 
 
     </FrameLayout>
@@ -41,6 +41,8 @@
         android:layout_height="wrap_content"
         android:text="Fragment_1"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/fragment2"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -50,6 +52,8 @@
         android:layout_marginStart="12dp"
         android:text="Fragment_2"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_static"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/fragment1"
         app:layout_constraintTop_toBottomOf="@+id/Place_holder"
         app:layout_constraintVertical_bias="0.0" />
@@ -60,7 +64,7 @@
         android:layout_height="wrap_content"
         android:text="static"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/fragment2"
         app:layout_constraintTop_toTopOf="@+id/fragment2" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

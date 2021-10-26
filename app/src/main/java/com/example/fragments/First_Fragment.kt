@@ -18,16 +18,11 @@ class First_Fragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_first_, container, false)
-
-    }
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-        setFragmentResultListener("requestKey") { requestKey, bundle ->
-
+        val view = inflater.inflate(R.layout.fragment_first_, container, false)
+        parentFragmentManager.setFragmentResultListener("DataKey",this) { requestKey, bundle ->
             val result = bundle.getString("data")
             tv_reciever.text = result
         }
+        return view
     }
-}
+    }
