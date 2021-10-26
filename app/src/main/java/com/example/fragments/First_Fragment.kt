@@ -23,6 +23,10 @@ class First_Fragment : Fragment() {
             val result = bundle.getString("data")
             tv_reciever.text = result
         }
+        parentFragmentManager.setFragmentResultListener("Request_Key",this){ requestKey,bundle ->
+            val result_text = bundle.getString("retriveKey")
+            tv_dialog_recieve.text = result_text
+        }
         return view
     }
     }

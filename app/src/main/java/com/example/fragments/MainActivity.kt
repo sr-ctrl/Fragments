@@ -32,5 +32,11 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this,Static_Activity::class.java)
             startActivity(intent)
         }
+        binding.btnDialog.setOnClickListener {
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.Place_holder,Dialog_Fragment())
+                commit()
+            }
+        }
     }
 }
