@@ -23,11 +23,10 @@ class First_Fragment : Fragment() {
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // Use the Kotlin extension in the fragment-ktx artifact
+
         setFragmentResultListener("requestKey") { requestKey, bundle ->
-            // We use a String here, but any type that can be put in a Bundle is supported
+
             val result = bundle.getString("data")
-            // Do something with the result
             tv_reciever.text = result
         }
     }

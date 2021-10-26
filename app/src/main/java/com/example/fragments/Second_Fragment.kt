@@ -23,9 +23,7 @@ class Second_Fragment : Fragment() {
             val result = Bundle()
             val input = et_input.text.toString()
             result.putString("data",input)
-            // Use the Kotlin extension in the fragment-ktx artifact
-            // setFragmentResult("requestKey", bundleOf("bundleKey" to result))
-            setFragmentResult("requestKey",result = result)
+             setFragmentResult("requestKey", bundleOf("bundleKey" to result))
 
     }
     }
